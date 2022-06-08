@@ -149,17 +149,13 @@
                 endtime = new Date("2022/5/14"); //定义结束时间
             var lefttime = nowtime.getTime() - endtime.getTime(), //距离结束时间的毫秒数
                 leftd = Math.floor(lefttime / (1000 * 60 * 60 * 24)), //计算天数
-                names = ['东', '西', '南', '北', '上', '下', '左', '右', '前', '后', '中', '明', '你'],
+                names = ['东', '西', '南', '北', '上', '下', '左', '右', '前', '后', '中', '明', '妮'],
                 whoiam = names[leftd % names.length];
             return whoiam; //返回倒计时的字符串
         }
         whoiam_today = showtime();
 
-        if (whoiam_today == '你') {
-            document.title = "妮妮de大冒险";
-        } else {
-            document.title = whoiam_today + whoiam_today + "de大冒险";
-        }
+        document.title = whoiam_today + whoiam_today + "de大冒险";
 
         var i = 0;
         var j = 0;
